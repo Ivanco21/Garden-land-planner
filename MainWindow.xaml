@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfClientForm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfClientForm"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Width" Value="200" ></Setter>
+            <Setter Property="Margin" Value="10" ></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left" ></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="200" ></Setter>
+            <Setter Property="Height" Value="25" ></Setter>
+            <Setter Property="Margin" Value="10" ></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left" ></Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Button Height="70"></Button>
+            <Button Height="70"></Button>
+            <Button Height="70"></Button>
+            <Button Height="70"></Button>
+        </StackPanel>
+        <Button Height="70" Grid.Column="0"  VerticalAlignment="Bottom"></Button>
+
+        <StackPanel Grid.Column="1">
+            <Label Content="Координаты участка"></Label>
+            <TextBox/>
+            <Label Content="Размеры (ширина в ряду)"></Label>
+            <DataGrid Width="400" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Длина,м" Width="200"/>
+                    <DataGridTextColumn Header="Ширина,м" Width="200"/>
+                </DataGrid.Columns>
+                
+
+            </DataGrid>
+            
+        </StackPanel>
+        
+    </Grid>
+</Window>
