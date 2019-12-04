@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfClientForm"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="700" Width="800" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="Label">
             <Setter Property="Width" Value="200" ></Setter>
@@ -19,7 +19,7 @@
             <Setter Property="HorizontalAlignment" Value="Left" ></Setter>
         </Style>
     </Window.Resources>
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="70"/>
@@ -34,20 +34,60 @@
         </StackPanel>
         <Button Height="70" Grid.Column="0"  VerticalAlignment="Bottom"></Button>
 
-        <StackPanel Grid.Column="1">
-            <Label Content="Координаты участка"></Label>
-            <TextBox/>
-            <Label Content="Размеры (ширина в ряду)"></Label>
-            <DataGrid Width="400" >
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Длина,м" Width="200"/>
-                    <DataGridTextColumn Header="Ширина,м" Width="200"/>
-                </DataGrid.Columns>
-                
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Margin="10,0" Grid.Column="1">
+            <StackPanel Grid.Column="1">
+                <DockPanel LastChildFill="True">
+                    <Label Content="Координаты участка"></Label>
+                    <TextBox />
+                </DockPanel>
 
-            </DataGrid>
-            
-        </StackPanel>
-        
+                <Label Content="Размеры (ширина в ряду)"></Label>
+                <DockPanel LastChildFill="True">
+                    <Label Content="Длина" Width="50"></Label>
+                    <TextBox Width="60"/>
+                    <Label Content="Ширина" Width="70"></Label>
+                    <TextBox  Width="60"/>
+                </DockPanel>
+
+
+                <DockPanel LastChildFill="True">
+                    <Label Content="0.1 Расстояние между рядами (м)"></Label>
+                    <TextBox />
+                </DockPanel>
+
+                <DockPanel LastChildFill="True">
+                    <Label Content="0.2 Расстояние между растениями (м)"></Label>
+                    <TextBox />
+                </DockPanel>
+
+                <DockPanel LastChildFill="True">
+                    <Label Content="0.2 Расстояние между растениями (м)"></Label>
+                    <TextBox />
+                </DockPanel>
+
+                <DockPanel LastChildFill="True">
+                    <Label Content="0.3 Направление рядов (в градусах)"></Label>
+                    <TextBox />
+                </DockPanel>
+
+                <DockPanel LastChildFill="True">
+                    <Label Content="2. Сетка от града "></Label>
+                    <CheckBox VerticalAlignment="Center"/>
+                </DockPanel>
+
+                <DockPanel LastChildFill="True">
+                    <Label Content="4. Расстояние между столбами (м)"></Label>
+                    <TextBox />
+                </DockPanel>
+
+                <DockPanel LastChildFill="True">
+                    <Label Content="5. Глубина установки (м)"></Label>
+                    <TextBox />
+                </DockPanel>
+                
+                <Rectangle  Width="650" Height="12" Fill="#FFEAE0E0"/>
+                <Label Content="6.Столбы"></Label>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
