@@ -59,8 +59,33 @@
     </ApplicationDefinition>
     <Compile Include="Converters\EnumCultureToStrConverter.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Compile Include="Views\FruitsView.xaml.cs">
+      <DependentUpon>FruitsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GargenView.xaml.cs">
+      <DependentUpon>GargenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GrapeView.xaml.cs">
+      <DependentUpon>GrapeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VegetablesView.xaml.cs">
+      <DependentUpon>VegetablesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VM\CultureVM.cs" />
     <Compile Include="VM\MainVM.cs" />
     <Compile Include="VM\ViewModelBase.cs" />
+    <Page Include="Views\FruitsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GargenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GrapeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -73,6 +98,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\VegetablesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Culture.cs" />

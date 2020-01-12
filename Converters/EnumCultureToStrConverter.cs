@@ -15,7 +15,7 @@ namespace WpfClientForm.Converters
                 {
                     case Culture.Fruits: return "Фрукты";
                     case Culture.Gargen: return "Сад";
-                    case Culture.Grape: return "Ягоды";
+                    case Culture.Grape: return "Виноград";
                     case Culture.Vegetables: return "Овощи";
                     default:
                         return null;

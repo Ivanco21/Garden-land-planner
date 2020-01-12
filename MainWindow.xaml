@@ -7,6 +7,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WpfClientForm"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:WpfClientForm.Views"
+    xmlns:vm="clr-namespace:WpfClientForm.VM"
     Title="MainWindow"
     Width="800"
     Height="1278"
@@ -33,6 +35,18 @@
             <Setter Property="VerticalAlignment" Value="Center" />
         </Style>
         <conv:EnumCultureToStrConverter x:Key="c2str" />
+        <DataTemplate DataType="{x:Type vm:FruitsVM}">
+            <views:FruitsView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:GargenVM}">
+            <views:GargenView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:GrapeVM}">
+            <views:GrapeView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:VegetablesVM}">
+            <views:VegetablesView />
+        </DataTemplate>
     </Window.Resources>
 
     <Grid>
@@ -115,62 +129,7 @@
                     Height="12"
                     Fill="#FFEAE0E0" />
                 <TextBlock Text="6.Столбы" />
-
-                <TextBlock Text="Сад" />
-                <DockPanel LastChildFill="True">
-                    <TextBlock Text="ж/б концевые 9*9,5 Высота (м)" />
-                    <TextBox />
-                </DockPanel>
-                <DockPanel LastChildFill="True">
-                    <TextBlock Text="ж/б промежуточные 7*7,5 Высота (м)" />
-                    <TextBox />
-                </DockPanel>
-                <DockPanel LastChildFill="True">
-                    <TextBlock Width="145" Text="дерево промежуточные" />
-                    <TextBlock Width="36" Text="ø(мм)" />
-                    <TextBox Width="50" />
-                    <TextBlock Width="58" Text="высота(м)" />
-                    <TextBox Width="50" />
-                </DockPanel>
-                <DockPanel LastChildFill="True">
-                    <TextBlock Width="145" Text="дерево концевые" />
-                    <TextBlock Width="36" Text="ø(мм)" />
-                    <TextBox Width="50" />
-                    <TextBlock Width="58" Text="высота(м)" />
-                    <TextBox Width="50" />
-                </DockPanel>
-
-
-                <TextBlock Text="Виноград" />
-                <DockPanel LastChildFill="True">
-                    <TextBlock Width="145" Text="оцинкованные" />
-                    <TextBlock Width="60" Text="габариты" />
-                    <TextBox Width="50" />
-                    <TextBlock Width="60" Text="высота(м)" />
-                    <TextBox Width="50" />
-                    <TextBlock Width="80" Text="профиль(мм)" />
-                    <TextBox Width="50" />
-                </DockPanel>
-
-                <DockPanel LastChildFill="True">
-                    <TextBlock Width="145" Text="промежуточные" />
-                    <TextBlock Width="60" Text="габариты" />
-                    <TextBox Width="50" />
-                    <TextBlock Width="60" Text="высота(м)" />
-                    <TextBox Width="50" />
-                    <TextBlock Width="80" Text="профиль(мм)" />
-                    <TextBox Width="50" />
-                </DockPanel>
-
-                <DockPanel LastChildFill="True">
-                    <TextBlock Width="145" Text="оцинкованные концевые" />
-                    <TextBlock Width="60" Text="габариты" />
-                    <TextBox Width="50" />
-                    <TextBlock Width="60" Text="высота(м)" />
-                    <TextBox Width="50" />
-                    <TextBlock Width="80" Text="профиль(мм)" />
-                    <TextBox Width="50" />
-                </DockPanel>
+                <ContentControl Content="{Binding CurrentCulture}" />
 
                 <TextBlock Text="7.Якорь" />
                 <TextBlock Text="Вкручиваемый" />
