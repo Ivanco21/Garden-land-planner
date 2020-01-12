@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfClientForm.VM;
 
 namespace WpfClientForm
 {
@@ -23,6 +24,9 @@ namespace WpfClientForm
         public MainWindow()
         {
             InitializeComponent();
+            // в дальнейшем нужно будет задавать DataContext извне
+            // то для удобства тестирования и понимания концепций оставляем здесь
+            DataContext = new MainVM();
         }
     }
 }
